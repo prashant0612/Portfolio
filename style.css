@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body,html{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: black;
+}
+body{
+    font-size: 1.4rem;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+header{
+    background-color: #76c1d4;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+    text-decoration: none;
+}
+
+nav li{
+    font-size: 1.8rem;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-in-out;
+}
+nav li:hover{
+    border-bottom: 0.4rem yellow solid;
+    transition: 0.2s ease-in;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+#hero{
+    background-color:#bccbde;
+    border-bottom: 4px solid blueviolet;
+}
+.hero-image img{
+    padding: 30px;
+    border-radius: 100000px;   
+    
+}
+#hero .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero-content{
+    display: grid;
+    place-items: center;
+}
+.hi-text{
+    font-size: 6rem;
+    color: yellow;
+    font-weight: bold;
+}
+#hero h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.name-text{
+    font-size: 5rem;
+}
+#hero h2{
+    font-size: 4rem;
+    font-weight: bold;
+
+   overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+@keyframes blink-caret{
+    from,
+    to {
+        border-color: transparent;
+    }
+    50%{
+        border-color: orange;
+    }
+}
+
+/* Project Section*/
+
+#project{
+    background: #c9af98;
+    
+}
+
+#project h2{
+    font-size: 6rem;
+    text-align: center;
+    justify-content: center;
+
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 20px;
+    
+}
+.grid-item{
+    display: grid;
+    place-items: center;
+
+}
+.card{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+.card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.card:hover .card-content{
+    background: white;
+    color:black ;
+    transform: translateY(0px);
+
+}
+.card-content{
+    padding: 2rem;
+    position: relative;
+    top: -6.5rem;
+    margin-bottom: -6.5rem;
+    transition: 0.s ease-in-out;
+    transform: translateY(100px);
+}
+.card-content h3{
+    text-align: center;
+}
+.card-content a{
+    font-weight: bold;
+}
+/* Contact Section*/
+#contact{
+    background: rgb(0, 255, 195);
+}
+
+#contact h2{
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#contact .container{
+    height: 90vh;
+    display: flex;
+    flex-direction:column;
+    gap: 4rem;
+    justify-content: center;
+}
+ .contact-way {
+    display: flex;
+    margin: 30px;
+    font-size: 22px;
+    margin-top: -20px;
+    gap: 10px;
+}
+.top-contact{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: -10px;
+}
+.bottom-contact{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: -17px;
+}
+.contact-way1 {
+    display: flex;
+    margin: 30px;
+    font-size: 20px;
+    margin-top: -20px;
+}
+.contact-way1 h3{
+    gap: -20px
+}
+/*footer*/
+footer{
+    background: blueviolet;
+    padding: 2.5rem;
+    color: black;
+    font-size: 1.6rem;
+    text-align: center;
+    
+}
+
+/*media Query*/
+@media(max-width: 786px){
+    html {
+        font-size: 40%;
+    }
+}
+@media(max-width: 500px){
+    html {
+        font-size: 32%;
+    }
+    #hero .container{
+        flex-direction: column;
+    }
+    .hero-image {
+        display: grid;
+        place-items: center;
+    }
+    #contact .container {
+        height: 50vh;
+    }
+}
+.container a{
+    font-weight: bold;
+}
